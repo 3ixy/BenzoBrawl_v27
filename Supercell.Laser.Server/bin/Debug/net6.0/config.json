@@ -1,0 +1,7 @@
+﻿{
+  "udp_host": "127.0.0.1",
+  "udp_port": 9339,
+  "database_username": "root",
+  "database_password": "",
+  "database_name":  "bsds"
+}
