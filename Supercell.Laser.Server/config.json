@@ -1,7 +1,7 @@
 ﻿{
-  "udp_host": "127.0.0.1",
+  "udp_host": "93.185.159.197",
   "udp_port": 9339,
   "database_username": "root",
-  "database_password": "",
+  "database_password": "openresty228",
   "database_name":  "bsds"
 }

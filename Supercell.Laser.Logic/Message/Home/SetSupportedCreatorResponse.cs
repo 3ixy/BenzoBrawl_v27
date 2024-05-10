@@ -6,6 +6,7 @@ namespace Supercell.Laser.Logic.Message.Home
         public override void Encode()
         {
             Stream.WriteVInt(0);
+            Stream.WriteString("Wtf");
         }
 
         public override int GetMessageType()
