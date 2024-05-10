@@ -73,11 +73,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj",
+      "projectUniqueName": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj",
       "projectName": "Supercell.Laser.Logic",
-      "projectPath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj",
+      "projectPath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj",
       "packagesPath": "C:\\Users\\Хасан\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Logic\\obj\\",
+      "outputPath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Logic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Хасан\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,8 +95,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj": {
-              "projectPath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj"
+            "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj": {
+              "projectPath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj"
             }
           }
         }

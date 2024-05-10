@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj",
+      "projectUniqueName": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj",
       "projectName": "Supercell.Laser.Titan",
-      "projectPath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj",
+      "projectPath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj",
       "packagesPath": "C:\\Users\\Хасан\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Titan\\obj\\",
+      "outputPath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Titan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Хасан\\AppData\\Roaming\\NuGet\\NuGet.Config",

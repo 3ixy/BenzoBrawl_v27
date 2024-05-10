@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x8W3yg0w0Y6gouCuERG8K7VV+R/9ySHpCKS8vlOKtMYoIvd85XhEkwuzgHjh03OIgIq/VxQI1Y+jeamEcPdy0w==",
+  "dgSpecHash": "2+kcK2/fjKhWhwvf9Yyg3kR58qWcKcVY8xsmq30pO8cWoz+ObjrOvxJ1vsNHVnzS2E5XpjIX8VoI2hQahr9/qw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Server\\Supercell.Laser.Server.csproj",
+  "projectFilePath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Server\\Supercell.Laser.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Хасан\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Хасан\\.nuget\\packages\\colorful.console\\1.2.15\\colorful.console.1.2.15.nupkg.sha512",

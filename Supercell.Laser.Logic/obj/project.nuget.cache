@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u2kVH6wciFRLzTUrByUpEZNKVCkOkMp5I6RS6GXSh55JyQ0UW7aztgpjfyg8W99Iw+S1Vb8YB+u93GQH+RAS6A==",
+  "dgSpecHash": "J8xNzrlBMKt2Av2MP2VJgVBPPtArKO1LnClWkXcJfZdk6mrWP+IOhoKwcrq6cy4D7TAaec8xSB1EJREEDc0D4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj",
+  "projectFilePath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Хасан\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Хасан\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
