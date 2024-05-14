@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "84hd+CkyAJmuRGba8BYov2zc3iS5pX1rCuJKqrq0oypo+ceu6NoxtGKFc3WBAWqnyAW1SrhrjQjCU1fR6RihEA==",
+  "dgSpecHash": "gRV4IebwiLZVl37nv5yZH5nXRYiaHGJntJ9a284x5Bot/B9Ru/qUrX4eO84cG/Wc7ea2giFgauPVTJ6I3HJTvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Хасан\\Desktop\\csv27 — копия\\src\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj",
+  "projectFilePath": "E:\\github\\BenzoBrawl_v27\\Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Хасан\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
     "C:\\Users\\Хасан\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",

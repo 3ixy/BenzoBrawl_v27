@@ -79,7 +79,9 @@
 
                 {14479, typeof(TeamInvitationResponseMessage)},
 
-                {14600, typeof(AvatarNameCheckRequestMessage)}
+                {14600, typeof(AvatarNameCheckRequestMessage)},
+
+                {18686, typeof(SetSupportedCreatorMessage)}
             };
         }
 

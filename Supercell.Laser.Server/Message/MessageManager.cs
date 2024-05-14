@@ -38,6 +38,8 @@
     using Supercell.Laser.Logic.Message.Team.Stream;
     using Supercell.Laser.Logic.Message;
     using Supercell.Laser.Logic.Message.Account.Auth;
+    using Supercell.Laser.Logic.Notification;
+    using Supercell.Laser.Logic.Command.Home;
 
     public class MessageManager
     {
@@ -201,6 +203,9 @@
                     break;
                 case 14600:
                     AvatarNameCheckRequestReceived((AvatarNameCheckRequestMessage)message);
+                    break;
+                case 18686:
+                    SetSupportedCreatorReceived((SetSupportedCreatorMessage)message);
                     break;
 
                 default:
@@ -755,6 +760,16 @@
             }
         }
 
+         private void SetSupportedCreatorReceived(SetSupportedCreatorMessage message)
+        {
+            if (HomeMode == null) return;
+
+            string code = message.Code;
+
+            SetSupportedCreatorResponse setSupported = new SetSupportedCreatorResponse();
+            Connection.Send(setSupported);
+        }
+
         private void SendMyAllianceData(Alliance alliance)
         {
             MyAllianceMessage myAlliance = new MyAllianceMessage();
@@ -794,7 +809,8 @@
                 {
                     case "status":
                         long megabytesUsed = Process.GetCurrentProcess().PrivateMemorySize64 / (1024 * 1024);
-                        response.Entry.Message = $"Server Status:\nServer Version: v{Program.SERVER_VERSION} (for v27.269) ({Program.BUILD_TYPE})\nPlayers Online: {Sessions.Count}\n" +
+                        response.Entry.Message = $"Server Status:\nServer Version: v{Program.SERVER_VERSION} (for v27.269) ({Program.BUILD_TYPE})\n"+
+                            $"Players Online: {Sessions.Count}\n" +
                             $"Cached accounts: {AccountCache.Count}\nCached alliances: {AllianceCache.Count}\nCached teams: {Teams.Count}\n" +
                             $"Your id: {accountId.GetHigherInt()}-{accountId.GetLowerInt()} ({LogicLongCodeGenerator.ToCode(accountId)})\n" +
                             $"Memory Used: {megabytesUsed}MB";
@@ -994,11 +1010,11 @@
         {
             int slot = message.EventSlot;
 
-            if (HomeMode.Home.Character.Disabled)
-            {
-                Connection.Send(new OutOfSyncMessage());
-                return;
-            }
+            // if (HomeMode.Home.Character.Disabled)
+            // {
+            //     Connection.Send(new OutOfSyncMessage());
+            //     return;
+            // }
 
             if (!Events.HasSlot(slot))
             {
@@ -1196,15 +1212,18 @@
                 return;
             }
 
-            // if (message.KeyVersion != PepperKey.VERSION)
-            // {
-            //     Connection.Send(new AuthenticationFailedMessage()
-            //     {
-            //         ErrorCode = 8,
-            //         UpdateUrl = "https://google.com"
-            //     });
-            //     return;
-            // }
+            Console.WriteLine(PepperKey.VERSION);
+            Console.WriteLine(message.KeyVersion);
+
+            if (message.KeyVersion != 1)
+            {
+                Connection.Send(new AuthenticationFailedMessage()
+                {
+                    ErrorCode = 8,
+                    UpdateUrl = "https://t.me/benzobrawl/16"
+                });
+                return;
+            }
 
             Connection.Messaging.Seed = message.ClientSeed;
 

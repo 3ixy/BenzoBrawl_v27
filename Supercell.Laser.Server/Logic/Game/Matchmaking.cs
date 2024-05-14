@@ -163,10 +163,15 @@
                         SecondsLeft--;
                         if (Queue.Count < PlayersRequired) {
                             if (SecondsLeft <= 12 & Queue.Count < PlayersRequired/2 && fakeFounded < PlayersRequired-2) {
-                                fakeFounded+=1;
+                                Random rnd = new Random();
+                                int val = rnd.Next(0, 1);
+                                if (val == 1) {
+                                    fakeFounded+=1;
+                                }
+                                
                             }
-                            if (SecondsLeft <= 6 & Queue.Count < PlayersRequired-2 && fakeFounded < PlayersRequired-2) {
-                                fakeFounded+=2;
+                            if (SecondsLeft <= 3 & Queue.Count < PlayersRequired-2 && fakeFounded < PlayersRequired-3) {
+                                fakeFounded+=1;
                             }
                         }
                     }
@@ -180,7 +185,9 @@
                 if (Queue.Count > 0)
                 {
                     MatchMakingStatusMessage message = new MatchMakingStatusMessage();
-
+                    if (Queue.Count == 0) {
+                        fakeFounded = 0;
+                    }
                     message.Seconds = SecondsLeft;
                     message.Found = Queue.Count + fakeFounded;
                     message.Max = PlayersRequired;
@@ -209,7 +216,7 @@
             RequestQueue.Enqueue(entry);
         }
 
-        int[] botBrawlers = new int[] { 0, 1, 2, 3, 9, 18 }; // Allowed
+        int[] botBrawlers = new int[] { 0, 1, 2, 3, 9, 18, 5, 6, 7, 8 }; // Allowed
         string[] botNicknames = new string[] 
             { 
             "Шамиль", "Рауль", "Вадим", "Алан",
@@ -219,6 +226,7 @@
 
         public void StartGame(List<MatchmakingEntry> entries)
         {
+            fakeFounded = 0;
             // The battle inits here
             // TODO: Merge it to BattleManager or smth..
 

@@ -533,8 +533,35 @@
             Skill skill = isUlti ? GetUltimateSkill() : GetWeaponSkill();
             if (skill == null) return;
             if (skill.IsActive) return;
-            if (skill.SkillData.BehaviorType == "Charge") return;
+            // Console.WriteLine(skill.SkillData.BehaviorType);
 
+
+            if (skill.SkillData.BehaviorType == "Charge") {
+                if (GamePlayUtil.IsJumpCharge(skill.SkillData.ChargeType))
+                {
+                    LogicVector2 Destination = new LogicVector2(GetX() + x, GetY() + y);
+                    JumpChargeDestination = Destination;
+                    int distance = Position.GetDistance(Destination);
+                    ChargeTime = distance / 50;
+                    // Console.WriteLine(JumpChargeDestination.X);
+                    // Console.WriteLine(JumpChargeDestination.Y);
+                    Position.X = JumpChargeDestination.X - Position.X;
+                    Position.Y = JumpChargeDestination.Y - Position.Y;
+                    if (!string.IsNullOrEmpty(skill.SkillData.AreaEffectObject))
+                    {
+                        // Console.WriteLine(skill.SkillData.AreaEffectObject);
+                        AreaEffectData effectData = DataTables.Get(17).GetData<AreaEffectData>(skill.SkillData.AreaEffectObject);
+                        AreaEffect effect = new AreaEffect(17, effectData.GetInstanceId());
+                        effect.SetPosition(Position.X, Position.Y, 0);
+                        effect.SetSource(this);
+                        effect.SetIndex(GetIndex());
+                        effect.SetDamage(skill.SkillData.Damage);
+                        GameObjectManager.AddGameObject(effect);
+                    }
+                }
+                return;
+            }
+            
             TileMap tileMap = GameObjectManager.GetBattle().GetTileMap();
             m_angle = LogicMath.GetAngle(x, y);
             skill.Activate(this, x, y, tileMap);
@@ -705,7 +732,6 @@
             foreach (Skill skill in m_skills)
             {
                 if (!skill.IsActive) continue;
-
                 if (skill.SkillData.BehaviorType == "Attack")
                 {
                     if (!skill.ShouldAttackThisTick()) continue;
@@ -714,13 +740,15 @@
                     int damage = skill.SkillData.Damage;
                     int spread = skill.SkillData.Spread;
                     int bulletsPerShot = skill.SkillData.NumBulletsInOneAttack;
-
                     this.Attack(skill.X, skill.Y, skill.SkillData.CastingRange, projectileData, damage, spread, bulletsPerShot, skill);
                 }
                 else if (skill.SkillData.BehaviorType == "Charge")
                 {
                     if (GamePlayUtil.IsJumpCharge(skill.SkillData.ChargeType))
                     {
+                        //JumpChargeDestination
+                        Console.WriteLine(JumpChargeDestination.X);
+                        Console.WriteLine(JumpChargeDestination.Y);
                         // не придумали
                         return;
                     }
@@ -979,6 +1007,7 @@
 
             if (m_poison != null)
             {
+                // CharacterData.Speed = CharacterData.Speed / 25; // тест
                 bitStream.WritePositiveInt(m_poison.GetPoisonType(), 2);
                 {
                     bitStream.WriteBoolean(m_poison.HasSlowDownEffect());

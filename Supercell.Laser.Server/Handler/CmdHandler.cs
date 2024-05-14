@@ -95,7 +95,7 @@
                 var session = Sessions.GetSession(id);
                 session.GameListener.SendTCPMessage(new AuthenticationFailedMessage()
                 {
-                    Message = "Клент и сервер не синхрони!"
+                    Message = TID_ERROR_POP_UP_OUT_OF_SYNC,
                 });
                 Sessions.Remove(id);
             }

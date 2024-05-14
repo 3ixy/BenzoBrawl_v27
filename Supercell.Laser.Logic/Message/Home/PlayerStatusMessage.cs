@@ -16,7 +16,7 @@
 
         public override int GetMessageType()
         {
-            return 18686;
+            return 14366;
         }
 
         public override int GetServiceNodeType()
@@ -25,3 +25,4 @@
         }
     }
 }
+     

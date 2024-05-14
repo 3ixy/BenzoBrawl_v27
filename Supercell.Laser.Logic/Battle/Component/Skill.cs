@@ -40,7 +40,7 @@
             int maxChargeCount = SkillData.MaxCharge;
             MaxCharge = LogicMath.Max(1000, 1000 * maxChargeCount);
             Charge = MaxCharge;
-
+            
             TicksActive = -1;
 
             if (SkillData.AttackPattern == 6)

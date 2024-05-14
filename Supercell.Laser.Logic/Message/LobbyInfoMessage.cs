@@ -13,7 +13,7 @@
         {
             Stream.WriteVInt(_online);
             Stream.WriteString("Benzo Brawl (Stage server)\nServer: o1.benzo.brawlstarsgame.com.hasan.ovh");
-            Stream.WriteVInt(0);
+            Stream.WriteVInt(10);
         }
 
         public void SetOnlineVal(int online)
