@@ -22,7 +22,8 @@
 
         public bool HasSlowDownEffect()
         {
-            return m_slowDown;
+            return true;
+            // return m_slowDown;
         }
 
         public void RefreshPoison(Character source, int damage, int tickCount)

@@ -12,7 +12,7 @@
         public override void Encode()
         {
             Stream.WriteVInt(_online);
-            Stream.WriteString("Benzo Brawl (Stage server)\nServer: o1.benzo.brawlstarsgame.com.hasan.ovh");
+            Stream.WriteString("Benzo Brawl (Бета-тест)\nОнлайн: "+_online+"\n\nt.me/benzobrawl\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
             Stream.WriteVInt(10);
         }
 

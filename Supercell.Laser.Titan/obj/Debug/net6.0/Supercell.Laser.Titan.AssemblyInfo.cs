@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Supercell.Laser.Titan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1c483a507f3be5343ae26fa1de3a285200d7139")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab75a110efc9c7de90d076fa5f226f7fcb2b9215")]
 [assembly: System.Reflection.AssemblyProductAttribute("Supercell.Laser.Titan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Supercell.Laser.Titan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

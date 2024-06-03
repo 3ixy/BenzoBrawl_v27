@@ -84,7 +84,7 @@
             Stream.WriteVInt(playerIndex);
             Stream.WriteVInt(0);
             Stream.WriteVInt(0);
-            Stream.WriteString("15RU");
+            Stream.WriteString("RU");
         }
 
         public override int GetMessageType()

@@ -1,0 +1,534 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\networking\\session\\sessions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\networking\\session\\sessions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\handler\\exithandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\handler\\exithandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\message\\messagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\message\\messagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\security\\clienthellomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\security\\clienthellomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\settings\\fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\settings\\fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\battle\\startspectatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\battle\\startspectatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\battle\\objects\\gameobjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\battle\\objects\\gameobjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\logic\\serverlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\logic\\serverlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\battle\\battlemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\battle\\battlemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\resources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\lobbyinfomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\lobbyinfomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\battle\\clientinputmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\battle\\clientinputmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\club\\chattoalliancestreammessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\club\\chattoalliancestreammessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\club\\createalliancemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\club\\createalliancemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\handler\\cmdhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\handler\\cmdhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\networking\\messaging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\networking\\messaging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\logic\\homegamelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\logic\\homegamelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\networking\\connections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\networking\\connections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\networking\\tcpgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\networking\\tcpgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\settings\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\settings\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\networking\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\networking\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.server\\logic\\game\\battles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15975935-5742-4498-94E2-8C02543898D9}|Supercell.Laser.Server\\Supercell.Laser.Server.csproj|solutionrelative:supercell.laser.server\\logic\\game\\battles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB865DC-A1F4-4AA1-B3BB-0A2CD9996283}|Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.titan\\debug\\debugger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FB865DC-A1F4-4AA1-B3BB-0A2CD9996283}|Supercell.Laser.Titan\\Supercell.Laser.Titan.csproj|solutionrelative:supercell.laser.titan\\debug\\debugger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\battle\\objects\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\battle\\objects\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\battle\\visionupdatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\battle\\visionupdatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\club\\alliancedatamessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\club\\alliancedatamessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\battle\\battleendmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\battle\\battleendmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|c:\\users\\\u0445\u0430\u0441\u0430\u043D\\desktop\\csv27\\src\\supercell.laser.logic\\message\\battle\\startloadingmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D4E287-9D85-4BA1-AA22-547107C61C95}|Supercell.Laser.Logic\\Supercell.Laser.Logic.csproj|solutionrelative:supercell.laser.logic\\message\\battle\\startloadingmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sessions.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Session\\Sessions.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Networking\\Session\\Sessions.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Session\\Sessions.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Networking\\Session\\Sessions.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAiwHgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T22:24:23.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientHelloMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Security\\ClientHelloMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Security\\ClientHelloMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Security\\ClientHelloMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Security\\ClientHelloMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T22:12:49.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LobbyInfoMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\LobbyInfoMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\LobbyInfoMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\LobbyInfoMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\LobbyInfoMessage.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:45:50.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessageManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Message\\MessageManager.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Message\\MessageManager.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Message\\MessageManager.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Message\\MessageManager.cs",
+              "ViewState": "AQIAAKQEAAAAAAAAAAAwwMIEAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T19:23:20.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateAllianceMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Club\\CreateAllianceMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Club\\CreateAllianceMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Club\\CreateAllianceMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Club\\CreateAllianceMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T22:12:45.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChatToAllianceStreamMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Club\\ChatToAllianceStreamMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Club\\ChatToAllianceStreamMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Club\\ChatToAllianceStreamMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Club\\ChatToAllianceStreamMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T22:11:01.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "config.json",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\config.json",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\config.json",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\config.json",
+              "RelativeToolTip": "Supercell.Laser.Server\\config.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-05T21:45:03.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Connections.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Connections.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Networking\\Connections.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Connections.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Networking\\Connections.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:39:38.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Connection.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Networking\\Connection.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Connection.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Networking\\Connection.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:39:41.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameObjectManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Battle\\Objects\\GameObjectManager.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Battle\\Objects\\GameObjectManager.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Battle\\Objects\\GameObjectManager.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Battle\\Objects\\GameObjectManager.cs",
+              "ViewState": "AQIAADwGAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:39:54.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Settings\\Configuration.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Settings\\Configuration.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Settings\\Configuration.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Settings\\Configuration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:40:13.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Messaging.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Messaging.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Networking\\Messaging.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\Messaging.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Networking\\Messaging.cs",
+              "ViewState": "AQIAANsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:39:38.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TCPGateway.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\TCPGateway.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Networking\\TCPGateway.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Networking\\TCPGateway.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Networking\\TCPGateway.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:39:42.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HomeGameListener.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logic\\HomeGameListener.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Logic\\HomeGameListener.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logic\\HomeGameListener.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Logic\\HomeGameListener.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:39:35.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CmdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Handler\\CmdHandler.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Handler\\CmdHandler.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Handler\\CmdHandler.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Handler\\CmdHandler.cs",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAtwJcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:40:30.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExitHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Handler\\ExitHandler.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Handler\\ExitHandler.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Handler\\ExitHandler.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Handler\\ExitHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:40:30.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Battles.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logic\\Game\\Battles.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Logic\\Game\\Battles.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logic\\Game\\Battles.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Logic\\Game\\Battles.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:40:25.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Resources.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Resources.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Resources.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Resources.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Resources.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:40:20.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logger.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Logger.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logger.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Logger.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:40:17.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Fingerprint.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Settings\\Fingerprint.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Settings\\Fingerprint.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Settings\\Fingerprint.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Settings\\Fingerprint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:39:47.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ServerListener.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logic\\ServerListener.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Logic\\ServerListener.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Logic\\ServerListener.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Logic\\ServerListener.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:36:23.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Program.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Server\\Program.cs",
+              "RelativeToolTip": "Supercell.Laser.Server\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T21:36:25.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Debugger.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Titan\\Debug\\Debugger.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Titan\\Debug\\Debugger.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Titan\\Debug\\Debugger.cs",
+              "RelativeToolTip": "Supercell.Laser.Titan\\Debug\\Debugger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:40:27.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Battle\\Objects\\Character.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Battle\\Objects\\Character.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Battle\\Objects\\Character.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Battle\\Objects\\Character.cs",
+              "ViewState": "AQIAAFoBAAAAAAAAAAAlwGoBAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:39:12.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AllianceDataMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Club\\AllianceDataMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Club\\AllianceDataMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Club\\AllianceDataMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Club\\AllianceDataMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:31:31.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BattleEndMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\BattleEndMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Battle\\BattleEndMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\BattleEndMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Battle\\BattleEndMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:31:27.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClientInputMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\ClientInputMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Battle\\ClientInputMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\ClientInputMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Battle\\ClientInputMessage.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:31:20.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "VisionUpdateMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\VisionUpdateMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Battle\\VisionUpdateMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\VisionUpdateMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Battle\\VisionUpdateMessage.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:31:15.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StartSpectateMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\StartSpectateMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Battle\\StartSpectateMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\StartSpectateMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Battle\\StartSpectateMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:31:13.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "StartLoadingMessage.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\StartLoadingMessage.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Message\\Battle\\StartLoadingMessage.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Message\\Battle\\StartLoadingMessage.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Message\\Battle\\StartLoadingMessage.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:31:06.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BattleMode.cs",
+              "DocumentMoniker": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Battle\\BattleMode.cs",
+              "RelativeDocumentMoniker": "Supercell.Laser.Logic\\Battle\\BattleMode.cs",
+              "ToolTip": "C:\\Users\\\u0425\u0430\u0441\u0430\u043D\\Desktop\\csv27\\src\\Supercell.Laser.Logic\\Battle\\BattleMode.cs",
+              "RelativeToolTip": "Supercell.Laser.Logic\\Battle\\BattleMode.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T20:27:47.541Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

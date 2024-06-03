@@ -58,9 +58,15 @@
             Stream.WriteVInt(Players.Count);
             foreach (BattlePlayer player in Players)
             {
+                bool isOwn = player.AccountId == OwnPlayer.AccountId;
                 Stream.WriteBoolean(player.AccountId == OwnPlayer.AccountId); // is own player
                 Stream.WriteBoolean(player.TeamIndex != OwnPlayer.TeamIndex); // is enemy
-                Stream.WriteBoolean(false); // Star player
+                if (isOwn) {
+                    Stream.WriteBoolean(true); // star player
+                } else {
+                    Stream.WriteBoolean(false); // Star player
+                }
+                
 
                 ByteStreamHelper.WriteDataReference(Stream, player.CharacterId);
                 Stream.WriteVInt(0); // skin
@@ -68,7 +74,7 @@
                 Stream.WriteVInt(player.Trophies); // trophies
                 Stream.WriteVInt(0);
                 Stream.WriteVInt(player.HeroPowerLevel + 1); // power level
-                bool isOwn = player.AccountId == OwnPlayer.AccountId;
+                
                 Stream.WriteBoolean(isOwn);
                 if (isOwn)
                 {

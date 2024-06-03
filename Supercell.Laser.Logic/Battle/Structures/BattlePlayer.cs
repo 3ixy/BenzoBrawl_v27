@@ -202,6 +202,7 @@
 
         public static BattlePlayer CreateBotInfo(string name, int playerIndex, int teamIndex, int character = 16000000)
         {
+            Random rand = new Random();
             BattlePlayer player = new BattlePlayer();
             player.DisplayData.Name = name;
             player.DisplayData.ThumbnailId = GlobalId.CreateGlobalId(28, 0);
@@ -210,6 +211,8 @@
             player.PlayerIndex = playerIndex;
             player.TeamIndex = teamIndex;
             player.SessionId = -1;
+            player.Trophies = rand.Next(0, 499);
+            player.HeroPowerLevel = rand.Next(0, 7);
             player.Bot = true;
 
             return player;

@@ -18,7 +18,7 @@ namespace Supercell.Laser.Logic.Home
     [JsonObject(MemberSerialization.OptIn)]
     public class ClientHome
     {
-        public const int DAILYOFFERS_COUNT = 6;
+        public const int DAILYOFFERS_COUNT = 10;
 
         public static readonly int[] GoldPacksPrice = new int[]
         {
@@ -488,6 +488,23 @@ namespace Supercell.Laser.Logic.Home
             }
 
             encoder.WriteVInt(0);
+
+// self.writeVint(1)  # array
+//         # Custom Support Message Notification
+//         self.writeVint(81) # Notification ID
+//         self.writeInt(1) # Notification Index
+//         self.writeBoolean(False) # Notification Read
+//         self.writeInt(0) # Notification Time Ago
+//         self.writeString(f"Добро пожаловать в <c8bfd28>V<c68fb51>B<c45f97a>C<c22f7a3> <c09f5cc>B<c00f5cc>R<c19f7a3>A<c33f97a>W<c4cfb51>L</c>!\nТвой ID: <c57fa66>{self.player.low_id}</c>\nКупить привилегию VIP TG - <c60fa5a>v<c4df971>b<c39f888>c<c26f79e>s<c13f6b5>u<c00f5cc>p<c00f5cc>p<c0ef6b5>o<c1cf79e>r<c2af887>t<c38f971>_<c47fa5a>b<c55fb43>o<c63fc2d>t</c>\nНовостной <c82fc33>T<c57fa66>e<c2bf799>l<c00f5cc>e<c20f799>g<c40fa66>r<c60fc33>a<c80ff00>m</c> канал: t.me/vbcbrawl\n") # Notification Message Entry       
+//         self.writeVint(0)
+
+            // {
+            //     encoder.WriteVInt(81);
+            //     encoder.WriteBoolean(false);
+            //     encoder.WriteInt(0);
+            //     encoder.WriteString("Test");
+            //     encoder.WriteVInt(0);
+            // }          
 
             encoder.WriteLong(HomeId);
             encoder.WriteVInt(0);

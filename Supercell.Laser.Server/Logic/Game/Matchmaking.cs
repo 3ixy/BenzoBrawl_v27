@@ -162,9 +162,9 @@
                         Turns = 0;
                         SecondsLeft--;
                         if (Queue.Count < PlayersRequired) {
-                            if (SecondsLeft <= 12 & Queue.Count < PlayersRequired/2 && fakeFounded < PlayersRequired-2) {
+                            if (SecondsLeft <= 12 & Queue.Count < PlayersRequired / 2 && fakeFounded < PlayersRequired-2) {
                                 Random rnd = new Random();
-                                int val = rnd.Next(0, 1);
+                                int val = rnd.Next(0, PlayersRequired-3);
                                 if (val == 1) {
                                     fakeFounded+=1;
                                 }
@@ -172,6 +172,12 @@
                             }
                             if (SecondsLeft <= 3 & Queue.Count < PlayersRequired-2 && fakeFounded < PlayersRequired-3) {
                                 fakeFounded+=1;
+                            }
+                            if (SecondsLeft <= 1 & Queue.Count < PlayersRequired && fakeFounded < PlayersRequired) {
+                                fakeFounded+=PlayersRequired-Queue.Count-fakeFounded;
+                            }
+                            if (Queue.Count + fakeFounded >= Queue.Count && Queue.Count >= PlayersRequired-1 && SecondsLeft >= 3) {
+                                fakeFounded-= PlayersRequired - Queue.Count;
                             }
                         }
                     }
@@ -185,7 +191,7 @@
                 if (Queue.Count > 0)
                 {
                     MatchMakingStatusMessage message = new MatchMakingStatusMessage();
-                    if (Queue.Count == 0) {
+                    if (Queue.Count == PlayersRequired) {
                         fakeFounded = 0;
                     }
                     message.Seconds = SecondsLeft;
@@ -217,15 +223,23 @@
         }
 
         int[] botBrawlers = new int[] { 0, 1, 2, 3, 9, 18, 5, 6, 7, 8 }; // Allowed
-        string[] botNicknames = new string[] 
-            { 
-            "Шамиль", "Рауль", "Вадим", "Алан",
-            "Вхуемпокер", "[БЛЭТ] Дахн", "Anushack user", "vk.me/@proxyara", 
-            "[Benzo] Абубандит", "MysticPhoenix", 
-            }; // никнеймы
 
         public void StartGame(List<MatchmakingEntry> entries)
         {
+            string[] botNicknames = new string[] 
+            { 
+            "Шамиль", "Рауль", "Вадим", "Алан",
+            "Вхуемпокер", "Дахн", "Anushack user", "vk.me/@proxyara", 
+            "[Benzo] Абубандит", "MysticPhoenix", "Леон",
+            "Dmitro_Gryzin", "Jeksio", "Fredj", "Xanter", "ENIZIN",
+            "АШОТ БЛАТ", "Gene", "Мяу", "Убил = гей", "Шалава",
+            "Сопля", "Шмаль Абхазия", "Маджыл", "[Ťвøя]ķатастрøфа",
+            "KoT_БоPuS", "-3acTPeJIuCb-", "52", "Полупокер",
+            "Азартный ебантей", "Кот", "King228", "Aurum",
+            "MMA", "Sosatel", "NoName", " .", "станок",
+            "путь наркомана", "11", "ками кириешка"
+            }; // никнеймы
+
             fakeFounded = 0;
             // The battle inits here
             // TODO: Merge it to BattleManager or smth..
@@ -330,6 +344,7 @@
                     CharacterData data = DataTables.Get(16).GetDataByGlobalId<CharacterData>(botCharacter);
                     // BattlePlayer bot = BattlePlayer.CreateBotInfo(data.ItemName.ToUpper(), i, teamIndex, botCharacter); OLD, имена ботов - имена персонажей из csv_logic
                     string botNickname = botNicknames[rand.Next(0, botNicknames.Length)]; // Генерация ников
+                    botNicknames = botNicknames.Where(val => val != botNickname).ToArray();
                     BattlePlayer bot = BattlePlayer.CreateBotInfo(botNickname, i, teamIndex, botCharacter);
                     battle.AddPlayer(bot, -1);
                 }

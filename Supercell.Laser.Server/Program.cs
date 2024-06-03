@@ -3,14 +3,38 @@
     using Supercell.Laser.Server.Handler;
     using Supercell.Laser.Server.Settings;
     using System.Drawing;
+    using System.Net;
+    using System.Net.Http;
+    using System.Reflection;
 
     static class Program
     {
         public const string SERVER_VERSION = "1.0";
+        public static int FAKE_ONLINE = 0;
         public const string BUILD_TYPE = "STAGE";
-
+        public static void SetFakeVal()
+        {
+            using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
+            {
+                client.BaseAddress = new Uri("https://hasan.ovh/brawl/");
+                HttpResponseMessage serverResponse = client.GetAsync($"fake.php").Result;
+                serverResponse.EnsureSuccessStatusCode();
+                string result = serverResponse.Content.ReadAsStringAsync().Result;
+                FAKE_ONLINE = Int32.Parse(result);
+            }
+            return;
+        }
         private static void Main(string[] args)
         {
+            using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
+            {
+                client.BaseAddress = new Uri("https://hasan.ovh/brawl/");
+                HttpResponseMessage serverResponse = client.GetAsync($"fake.php").Result;
+                serverResponse.EnsureSuccessStatusCode();
+                string result = serverResponse.Content.ReadAsStringAsync().Result;
+                FAKE_ONLINE = Int32.Parse(result);
+            }
+
             Console.Title = "BenzoBrawl v27";
             Directory.SetCurrentDirectory(AppContext.BaseDirectory);
 

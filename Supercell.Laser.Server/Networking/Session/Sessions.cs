@@ -5,6 +5,8 @@
     using Supercell.Laser.Logic.Listener;
     using Supercell.Laser.Logic.Message.Account;
     using Supercell.Laser.Logic.Message.Account.Auth;
+    using Supercell.Laser.Logic.Message.Battle;
+
     using Supercell.Laser.Logic.Message.Friends;
     using Supercell.Laser.Server.Logic.Game;
     using System.Collections.Concurrent;

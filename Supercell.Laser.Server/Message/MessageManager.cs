@@ -7,6 +7,9 @@
     using Supercell.Laser.Logic.Data;
     using Supercell.Laser.Logic.Friends;
     using Supercell.Laser.Logic.Home;
+    using Supercell.Laser.Logic.Home.Gatcha;
+    using Supercell.Laser.Logic.Message.Home;
+    using Supercell.Laser.Titan.DataStream;
     using Supercell.Laser.Logic.Home.Structures;
     using Supercell.Laser.Logic.Listener;
     using Supercell.Laser.Logic.Message.Account;
@@ -40,6 +43,9 @@
     using Supercell.Laser.Logic.Message.Account.Auth;
     using Supercell.Laser.Logic.Notification;
     using Supercell.Laser.Logic.Command.Home;
+    using System.Net;
+    using System.Net.Http;
+    using System.Reflection;
 
     public class MessageManager
     {
@@ -70,7 +76,8 @@
                 case 10101:
                     LoginReceived((AuthenticationMessage)message);
                     LobbyInfoMessage LobbyInfo = new LobbyInfoMessage();
-                    LobbyInfo.SetOnlineVal(Sessions.Count);
+                    Program.SetFakeVal();
+                    LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     break;
                 case 10107:
@@ -80,7 +87,8 @@
                     LastKeepAlive = DateTime.UtcNow;
                     Connection.Send(new KeepAliveServerMessage());
                     LobbyInfo = new LobbyInfoMessage();
-                    LobbyInfo.SetOnlineVal(Sessions.Count);
+                    Program.SetFakeVal();
+                    LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     break;
                 case 10110:
@@ -119,7 +127,8 @@
                     break;
                 case 14106:   
                     LobbyInfo = new LobbyInfoMessage();
-                    LobbyInfo.SetOnlineVal(Sessions.Count);
+                    Program.SetFakeVal();
+                    LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     CancelMatchMaking((CancelMatchmakingMessage)message);
                  
@@ -133,7 +142,8 @@
                 case 14113:
                     GetPlayerProfile((GetPlayerProfileMessage)message);
                     LobbyInfo = new LobbyInfoMessage();
-                    LobbyInfo.SetOnlineVal(Sessions.Count);
+                    Program.SetFakeVal();
+                    LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     break;
                 case 14166:
@@ -760,12 +770,17 @@
             }
         }
 
-         private void SetSupportedCreatorReceived(SetSupportedCreatorMessage message)
+        private void SetSupportedCreatorReceived(SetSupportedCreatorMessage message)
         {
-            if (HomeMode == null) return;
-
+            // BenzoID
             string code = message.Code;
-
+            if (code == "f") {
+                AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
+                loginFailed.ErrorCode = 1;
+                loginFailed.Message = "TID_BENZOID_LOGIN_SUCCESS";
+                Connection.Send(loginFailed);
+                return;
+            }
             SetSupportedCreatorResponse setSupported = new SetSupportedCreatorResponse();
             Connection.Send(setSupported);
         }
@@ -797,7 +812,7 @@
 
                 AllianceStreamEntryMessage response = new AllianceStreamEntryMessage();
                 response.Entry = new AllianceStreamEntry();
-                response.Entry.AuthorName = "Debugger";
+                response.Entry.AuthorName = "BenzoBrawl";
                 response.Entry.AuthorId = 1;
                 response.Entry.Id = alliance.Stream.EntryIdCounter + 667 + BotIdCounter++;
                 response.Entry.AuthorRole = AllianceRole.Member;
@@ -807,7 +822,7 @@
 
                 switch (cmd[0])
                 {
-                    case "status":
+                    case "dev_status":
                         long megabytesUsed = Process.GetCurrentProcess().PrivateMemorySize64 / (1024 * 1024);
                         response.Entry.Message = $"Server Status:\nServer Version: v{Program.SERVER_VERSION} (for v27.269) ({Program.BUILD_TYPE})\n"+
                             $"Players Online: {Sessions.Count}\n" +
@@ -817,11 +832,66 @@
                         Connection.Send(response);
                         break;
                     case "help":
-                        response.Entry.Message = $"List of commands:\n/help - shows this message\n/status - show server status"; // /usecode [code] - use bonus code
+                        response.Entry.Message = $"Список команд:\n"+
+                        $"/code [код] - Активация промокода"; // /usecode [code] - use bonus code
                         Connection.Send(response);
                         break;
+                    case "code":
+                        if (cmd[1] != null) {
+                            using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
+                            {
+                                client.BaseAddress = new Uri("https://hasan.ovh/brawl/");
+                                HttpResponseMessage serverResponse = client.GetAsync($"activate.php?code=\"{cmd[1]}\"&id=\"{HomeMode.Avatar.AccountId}\"").Result;
+                                serverResponse.EnsureSuccessStatusCode();
+                                string result = serverResponse.Content.ReadAsStringAsync().Result;
+                                if (result == "200") {
+                                    string[] codepart = cmd[1].Split('_');
+                                    Console.WriteLine(cmd[1]);
+                                    Console.WriteLine(codepart[0]);
+                                    Console.WriteLine(codepart[1]);
+                                    Console.WriteLine(codepart[2]);
+                                    // 0-9Aa-Zz_g_90   = 90 gems (NUM_gems_COUNT)
+                                    // 0_g_10 0_gems_10 0_gms_0
+                                    if (codepart[1] == "g") {
+                                        ClientAvatar avatar = HomeMode.Avatar;
+                                        HomeMode.Avatar.AddDiamonds(Int32.Parse(codepart[2]));
+                                        AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
+                                        loginFailed.ErrorCode = 1;
+                                        loginFailed.Message = "Success. You recived: "+codepart[2]+" Gems";
+                                        Connection.Send(loginFailed);
+
+                                        return;
+                                    }
+                                    if (codepart[1] == "c") {
+                                        ClientAvatar avatar = HomeMode.Avatar;
+                                        HomeMode.Avatar.AddGold(Int32.Parse(codepart[2]));
+                                        AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
+                                        loginFailed.ErrorCode = 1;
+                                        loginFailed.Message = "Success. You recived: "+codepart[2]+" Coins";
+                                        Connection.Send(loginFailed);
+                                    }
+                                }
+                                if (result == "403") {
+                                    response.Entry.Message = $"Вы уже использовали данный промокод";
+                                    Connection.Send(response);
+                                }
+                                if (result == "404") {
+                                    response.Entry.Message = $"Промокод не найден";
+                                    Connection.Send(response);
+                                }
+                                else {
+                                    // ClientAvatar avatar = HomeMode.Avatar;
+                                    // HomeMode.Avatar.AddDiamonds(100);
+                                    // DeliveryUnit unit = new DeliveryUnit(9);
+                                    // HomeMode.SimulateGatcha(unit);
+                                    response.Entry.Message = $"Неизвестная ошибка\nt.me/benzobrawl";
+                                    Connection.Send(response);
+                                }
+                            }
+                        }
+                        break;
                     default:
-                        response.Entry.Message = $"Unknown command \"{cmd[0]}\" - type \"/help\" to get command list!";
+                        response.Entry.Message = $"Неизвестная команда (\"{cmd[0]}\") - Введите \"/help\" для получения списка команд";
                         Connection.Send(response);
                         break;
                 }
