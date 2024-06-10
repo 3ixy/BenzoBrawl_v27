@@ -40,6 +40,7 @@
             stream.WriteInt(LogicServerListener.Instance.IsPlayerOnline(AccountId) ? 0 : (int)(DateTime.UtcNow - Avatar.LastOnline).TotalSeconds); // Last online time
             if (stream.WriteBoolean(DisplayData != null))
             {
+                DisplayData.Name = Avatar.Name;
                 DisplayData.Encode(stream);
             }
         }

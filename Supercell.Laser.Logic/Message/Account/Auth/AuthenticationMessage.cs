@@ -9,11 +9,13 @@
 
         public long AccountId;
         public string PassToken;
+        public string Sha;
 
         public override void Decode()
         {
             AccountId = Stream.ReadLong();
             PassToken = Stream.ReadString();
+            Sha = Stream.ReadString();
         }
 
         public override int GetMessageType()

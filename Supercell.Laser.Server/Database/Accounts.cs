@@ -57,6 +57,7 @@
             account.Avatar.PassToken = account.PassToken;
 
             account.Home.HomeId = account.AccountId;
+            account.Home.NameColor = 0;
 
             Hero hero = new Hero(16000000, 23000000);
             account.Avatar.Heroes.Add(hero);

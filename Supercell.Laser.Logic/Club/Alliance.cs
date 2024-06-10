@@ -1,6 +1,8 @@
 ﻿namespace Supercell.Laser.Logic.Club
 {
     using Newtonsoft.Json;
+    using Supercell.Laser.Logic.Avatar;
+
     using Supercell.Laser.Logic.Data.Helper;
     using Supercell.Laser.Logic.Listener;
     using Supercell.Laser.Logic.Message.Club;
@@ -117,6 +119,9 @@
             stream.WriteVInt(members.Length);
             foreach (AllianceMember member in members)
             {
+                // Console.WriteLine(member.AccountId);
+                // ClientAvatar avatar = LogicServerListener.Instance.GetAvatar(member.AccountId);
+                // AllianceMember member1 = new AllianceMember(member.AccountId);
                 member.Encode(stream);
             }
         }

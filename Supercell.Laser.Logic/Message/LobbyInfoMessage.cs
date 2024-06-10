@@ -3,6 +3,7 @@
     public class LobbyInfoMessage : GameMessage
     {
         private int _online;
+        public bool isVip;
 
         public LobbyInfoMessage() : base()
         {
@@ -11,8 +12,14 @@
 
         public override void Encode()
         {
+            string status;
+            if (isVip) {
+                status = "VIP-игрок";
+            }else {
+                status = "Игрок";
+            }
             Stream.WriteVInt(_online);
-            Stream.WriteString("Benzo Brawl (Бета-тест)\nОнлайн: "+_online+"\n\nt.me/benzobrawl\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            Stream.WriteString("Dummy Brawl (Бета-тест)\nОнлайн: "+_online+"\nВаш статус: "+status+"\n\nt.me/dummy_team\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
             Stream.WriteVInt(10);
         }
 

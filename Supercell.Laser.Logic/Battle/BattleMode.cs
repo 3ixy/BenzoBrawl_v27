@@ -166,9 +166,15 @@ namespace Supercell.Laser.Logic.Battle
                 message.TokensReward = tokensReward;
                 if (rank > 5)
                 {
-                    int trophiesReward = -(rank - 5);
+                    int outsider = 0;
+                    if (player.Avatar.IsPremium) {
+                        outsider += 2;
+                        message.TrophiesOutsider += outsider;
+                    }
+                    int trophiesReward = -(rank - 5) + outsider;
                     if (hero.Trophies < -trophiesReward) trophiesReward = -hero.Trophies;
                     message.TrophiesReward = trophiesReward;
+                    
 
                     player.Avatar.AddTokens(tokensReward);
                     player.Home.TokenReward += tokensReward;
@@ -176,9 +182,14 @@ namespace Supercell.Laser.Logic.Battle
                 }
                 else
                 {
-                    int trophiesReward = (5 - rank) * 2;
+                    int outsider = 0;
+                    if (player.Avatar.IsPremium) {
+                        outsider += 3;
+                        message.TrophiesOutsider += outsider;
+                    }
+                    int trophiesReward =( (5 - rank) * 2 ) + outsider;
                     message.TrophiesReward = trophiesReward;
-
+                    
                     player.Avatar.AddTokens(tokensReward);
                     player.Home.TokenReward += tokensReward;
                     player.Home.TrophiesReward += trophiesReward;
@@ -189,6 +200,7 @@ namespace Supercell.Laser.Logic.Battle
                         message.StarToken = true;
                         player.Home.StarTokenReward += 1;
                     }
+                    
                     hero.AddTrophies(message.TrophiesReward);
                 }
                 
@@ -700,9 +712,19 @@ namespace Supercell.Laser.Logic.Battle
                             int trophiesReward;
                             if (rank == 1) {
                                 trophiesReward = 10;
+                                if (player.Avatar.IsPremium) {
+                                    trophiesReward += 4;
+                                    message.TrophiesOutsider += 4;
+                                }
                             }else {
                                 trophiesReward = (5 - rank) * 2;
+                                if (player.Avatar.IsPremium) {
+                                    trophiesReward += 3;
+                                    message.TrophiesOutsider += 3;
+                                }
                             }
+
+                            
                             message.TrophiesReward = trophiesReward;
 
                             player.Avatar.AddTokens(tokensReward);
@@ -712,8 +734,16 @@ namespace Supercell.Laser.Logic.Battle
                             int trophiesReward;
                             if (rank == 1) {
                                 trophiesReward = 9;
+                                 if (player.Avatar.IsPremium) {
+                                    trophiesReward += 3;
+                                    message.TrophiesOutsider += 3;
+                                }
                             }else {
-                                trophiesReward = ( (5 - rank) * 2 ) -1;
+                                trophiesReward = ( (5 - rank) * 2 ) -2;
+                                if (player.Avatar.IsPremium) {
+                                    trophiesReward += 2;
+                                    message.TrophiesOutsider += 2;
+                                }
                             }
                             message.TrophiesReward = trophiesReward;
 
@@ -726,6 +756,7 @@ namespace Supercell.Laser.Logic.Battle
                         if (rank <= 4)
                         {
                             player.Avatar.AddStarTokens(1);
+                            player.Avatar.SoloWins++;
                             message.StarToken = true;
                             player.Home.StarTokenReward += 1;
                         }

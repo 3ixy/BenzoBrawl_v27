@@ -6,16 +6,18 @@
     {
         public int ThumbnailId;
         public string Name;
+        public int Color;
 
         public PlayerDisplayData()
         {
             ;
         }
 
-        public PlayerDisplayData(int thumbnail, string name)
+        public PlayerDisplayData(int thumbnail, string name, int Color = 0)
         {
             ThumbnailId = thumbnail;
             Name = name;
+            Color = Color;
         }
 
         public void Encode(ByteStream stream)
@@ -23,7 +25,11 @@
             stream.WriteString(Name);
             stream.WriteVInt(100);
             stream.WriteVInt(ThumbnailId);
-            stream.WriteVInt(43000000);
+            stream.WriteVInt(43000000+Color);
+            if (Color > 0) {
+                
+                stream.WriteVInt(Color);
+            }
         }
     }
 }

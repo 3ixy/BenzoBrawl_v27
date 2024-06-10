@@ -77,6 +77,7 @@
                     LoginReceived((AuthenticationMessage)message);
                     LobbyInfoMessage LobbyInfo = new LobbyInfoMessage();
                     Program.SetFakeVal();
+                    LobbyInfo.isVip = HomeMode.Avatar.IsPremium;
                     LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     break;
@@ -88,6 +89,7 @@
                     Connection.Send(new KeepAliveServerMessage());
                     LobbyInfo = new LobbyInfoMessage();
                     Program.SetFakeVal();
+                    LobbyInfo.isVip = HomeMode.Avatar.IsPremium;
                     LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     break;
@@ -128,6 +130,7 @@
                 case 14106:   
                     LobbyInfo = new LobbyInfoMessage();
                     Program.SetFakeVal();
+                    LobbyInfo.isVip = HomeMode.Avatar.IsPremium;
                     LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     CancelMatchMaking((CancelMatchmakingMessage)message);
@@ -143,6 +146,7 @@
                     GetPlayerProfile((GetPlayerProfileMessage)message);
                     LobbyInfo = new LobbyInfoMessage();
                     Program.SetFakeVal();
+                    LobbyInfo.isVip = HomeMode.Avatar.IsPremium;
                     LobbyInfo.SetOnlineVal(Sessions.Count+Program.FAKE_ONLINE);
                     Connection.Send(LobbyInfo);
                     break;
@@ -457,8 +461,14 @@
 
             if (HomeMode.Home.Character.Disabled)
             {
-                Connection.Send(new OutOfSyncMessage());
+                AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
+                loginFailed.ErrorCode = 1;
+                loginFailed.Message = "Персонаж временно отключен\nCharacter is temporarily disabled";
+                Connection.Send(loginFailed);
+
                 return;
+                // Connection.Send(new OutOfSyncMessage());
+                // return;
             }
 
             TeamMember member = team.GetMember(HomeMode.Avatar.AccountId);
@@ -508,7 +518,7 @@
                 TeamMember member = new TeamMember();
                 member.AccountId = HomeMode.Avatar.AccountId;
                 member.CharacterId = HomeMode.Home.CharacterId;
-                member.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name);
+                member.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name, HomeMode.Home.NameColor);
 
                 Hero hero = HomeMode.Avatar.GetHero(HomeMode.Home.CharacterId);
                 member.HeroTrophies = hero.Trophies;
@@ -555,7 +565,7 @@
 
                 Friend friendEntry = new Friend();
                 friendEntry.AccountId = HomeMode.Avatar.AccountId;
-                friendEntry.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name);
+                friendEntry.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name, HomeMode.Home.NameColor);
                 friendEntry.Trophies = HomeMode.Avatar.Trophies;
                 teamInvitationMessage.Unknown = 1;
                 teamInvitationMessage.FriendEntry = friendEntry;
@@ -604,7 +614,7 @@
             TeamMember member = new TeamMember();
             member.AccountId = HomeMode.Avatar.AccountId;
             member.CharacterId = HomeMode.Home.CharacterId;
-            member.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name);
+            member.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name, HomeMode.Home.NameColor);
 
             Hero hero = HomeMode.Avatar.GetHero(HomeMode.Home.CharacterId);
             member.HeroTrophies = hero.Trophies;
@@ -716,14 +726,14 @@
             {
                 Friend friendEntry = new Friend();
                 friendEntry.AccountId = HomeMode.Avatar.AccountId;
-                friendEntry.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name);
+                friendEntry.DisplayData = new PlayerDisplayData(HomeMode.Home.ThumbnailId, HomeMode.Avatar.Name, data.Home.NameColor);
                 friendEntry.FriendReason = message.Reason;
                 friendEntry.FriendState = 3;
                 avatar.Friends.Add(friendEntry);
 
                 Friend request = new Friend();
                 request.AccountId = avatar.AccountId;
-                request.DisplayData = new PlayerDisplayData(data.Home.ThumbnailId, data.Avatar.Name);
+                request.DisplayData = new PlayerDisplayData(data.Home.ThumbnailId, data.Avatar.Name, data.Home.NameColor);
                 request.FriendReason = 0;
                 request.FriendState = 2;
                 HomeMode.Avatar.Friends.Add(request);
@@ -812,7 +822,7 @@
 
                 AllianceStreamEntryMessage response = new AllianceStreamEntryMessage();
                 response.Entry = new AllianceStreamEntry();
-                response.Entry.AuthorName = "BenzoBrawl";
+                response.Entry.AuthorName = "Dummy Brawl";
                 response.Entry.AuthorId = 1;
                 response.Entry.Id = alliance.Stream.EntryIdCounter + 667 + BotIdCounter++;
                 response.Entry.AuthorRole = AllianceRole.Member;
@@ -831,9 +841,25 @@
                             $"Memory Used: {megabytesUsed}MB";
                         Connection.Send(response);
                         break;
+                    case "vipcolor":
+                        if (HomeMode.Avatar.IsPremium) { 
+                            HomeMode.Home.NameColor = 12;
+                            AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
+                            loginFailed.ErrorCode = 1;
+                            loginFailed.Message = "Success.";
+                            Connection.Send(loginFailed);
+                            return;
+                        }else {
+                            response.Entry.Message = $"Ошибка! Для использования команды необходим VIP статус\n"+
+                            $"Oops! You need a VIP-status to execute this command\n"+
+                            $"Купить/Buy: t.me/dummy_team";
+                            Connection.Send(response);
+                        }
+                        break;
                     case "help":
                         response.Entry.Message = $"Список команд:\n"+
-                        $"/code [код] - Активация промокода"; // /usecode [code] - use bonus code
+                        $"/code [код] - Активация промокода/n"+ // /usecode [code] - use bonus code
+                        $"/vipcolor - Градиентный цвет ника (Нужен VIP)";
                         Connection.Send(response);
                         break;
                     case "code":
@@ -853,7 +879,6 @@
                                     // 0-9Aa-Zz_g_90   = 90 gems (NUM_gems_COUNT)
                                     // 0_g_10 0_gems_10 0_gms_0
                                     if (codepart[1] == "g") {
-                                        ClientAvatar avatar = HomeMode.Avatar;
                                         HomeMode.Avatar.AddDiamonds(Int32.Parse(codepart[2]));
                                         AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
                                         loginFailed.ErrorCode = 1;
@@ -863,8 +888,14 @@
                                         return;
                                     }
                                     if (codepart[1] == "c") {
-                                        ClientAvatar avatar = HomeMode.Avatar;
                                         HomeMode.Avatar.AddGold(Int32.Parse(codepart[2]));
+                                        AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
+                                        loginFailed.ErrorCode = 1;
+                                        loginFailed.Message = "Success. You recived: "+codepart[2]+" Coins";
+                                        Connection.Send(loginFailed);
+                                    }
+                                     if (codepart[1] == "st") {
+                                        HomeMode.Avatar.AddStarTokens(Int32.Parse(codepart[2]));
                                         AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
                                         loginFailed.ErrorCode = 1;
                                         loginFailed.Message = "Success. You recived: "+codepart[2]+" Coins";
@@ -880,11 +911,7 @@
                                     Connection.Send(response);
                                 }
                                 else {
-                                    // ClientAvatar avatar = HomeMode.Avatar;
-                                    // HomeMode.Avatar.AddDiamonds(100);
-                                    // DeliveryUnit unit = new DeliveryUnit(9);
-                                    // HomeMode.SimulateGatcha(unit);
-                                    response.Entry.Message = $"Неизвестная ошибка\nt.me/benzobrawl";
+                                    response.Entry.Message = $"Неизвестная ошибка\nt.me/dummy_team";
                                     Connection.Send(response);
                                 }
                             }
@@ -1080,11 +1107,17 @@
         {
             int slot = message.EventSlot;
 
-            // if (HomeMode.Home.Character.Disabled)
-            // {
-            //     Connection.Send(new OutOfSyncMessage());
-            //     return;
-            // }
+            if (HomeMode.Home.Character.Disabled)
+            {
+                AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
+                loginFailed.ErrorCode = 1;
+                loginFailed.Message = "Персонаж временно отключен\nCharacter is temporarily disabled";
+                Connection.Send(loginFailed);
+
+                return;
+                // Connection.Send(new OutOfSyncMessage());
+                // return;
+            }
 
             if (!Events.HasSlot(slot))
             {
@@ -1152,7 +1185,7 @@
         private void LoginReceived(AuthenticationMessage message)
         {
             Account account = null;
-
+            
             if (message.AccountId == 0)
             {
                 account = Accounts.Create();

@@ -38,7 +38,8 @@
 
         public AllianceMember(ClientAvatar avatar)
         {
-            DisplayData = new PlayerDisplayData(avatar.HomeMode.Home.ThumbnailId, avatar.Name);
+            ClientAvatar avatar2 = LogicServerListener.Instance.GetAvatar(Avatar.AccountId);
+            DisplayData = new PlayerDisplayData(avatar2.HomeMode.Home.ThumbnailId, avatar2.Name);
             AccountId = avatar.AccountId;
             Trophies = avatar.Trophies;
             Role = avatar.AllianceRole;
@@ -47,7 +48,7 @@
         public void Encode(ByteStream stream)
         {
             ClientAvatar avatar = Avatar;
-
+            ClientAvatar avatar2 = LogicServerListener.Instance.GetAvatar(AccountId);
             stream.WriteLong(AccountId);
             stream.WriteVInt((int)Role);
             stream.WriteVInt(avatar.Trophies);

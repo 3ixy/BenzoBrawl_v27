@@ -14,6 +14,7 @@
         public int Result;
         public int TokensReward;
         public int TrophiesReward;
+        public int TrophiesOutsider = 0;
         public List<BattlePlayer> Players;
         public List<Quest> ProgressiveQuests;
         public BattlePlayer OwnPlayer;
@@ -42,7 +43,7 @@
             Stream.WriteVInt(0);
             Stream.WriteVInt(0);
             Stream.WriteVInt(0);
-            Stream.WriteVInt(0);
+            Stream.WriteVInt(TrophiesOutsider);
 
             Stream.WriteBoolean(StarToken);
             Stream.WriteBoolean(false); // no experience

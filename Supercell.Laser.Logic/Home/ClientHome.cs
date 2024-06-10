@@ -32,6 +32,7 @@ namespace Supercell.Laser.Logic.Home
 
         [JsonProperty] public long HomeId;
         [JsonProperty] public int ThumbnailId;
+        [JsonProperty] public int NameColor;
         [JsonProperty] public int CharacterId;
 
         [JsonProperty] public List<OfferBundle> OfferBundles;
@@ -217,7 +218,7 @@ namespace Supercell.Laser.Logic.Home
             bundle.EndTime = DateTime.UtcNow.Date.AddDays(1).AddHours(8); // tomorrow at 8:00 utc (11:00 MSK)
 
             Random random = new Random();
-            int type = shouldPowerPoints ? 0 : random.Next(0, 2); // getting a type
+            int type = shouldPowerPoints ? 0 : random.Next(0, 3); // getting a type
 
             switch (type)
             {
@@ -262,11 +263,18 @@ namespace Supercell.Laser.Logic.Home
                     bundle.Currency = 1;
 
                     break;
-                case 1: // mega box
+                case 1: // VIP Offer
+                    Offer vipOffer = new Offer(ShopItem.MegaBox, 1);
+                    bundle.Items.Add(vipOffer);
+                    bundle.Cost = 50;
+                    bundle.OldCost = 80;
+                    bundle.Currency = 0;
+                    break;
+                case 2: // mega box
                     Offer megaBoxOffer = new Offer(ShopItem.MegaBox, 1);
                     bundle.Items.Add(megaBoxOffer);
-                    bundle.Cost = 20;
-                    bundle.OldCost = 40;
+                    bundle.Cost = 40;
+                    bundle.OldCost = 80;
                     bundle.Currency = 0;
                     break;
             }
@@ -290,7 +298,12 @@ namespace Supercell.Laser.Logic.Home
 
             // Name colors not implemented since I used game patch to allow color codes in names and everywhere.
             encoder.WriteVInt(43);
-            encoder.WriteVInt(0);
+            // if (HomeMode.Avatar.IsPremium) {
+            //     encoder.WriteVInt(12);
+            // }else {
+            encoder.WriteVInt(HomeMode.Home.NameColor);
+            // }
+            
 
             encoder.WriteVInt(18); // Played game modes
             for (int i = 0; i < 18; i++)
@@ -344,7 +357,7 @@ namespace Supercell.Laser.Logic.Home
             ByteStreamHelper.WriteDataReference(encoder, Character);
 
             encoder.WriteString("RU"); // Z
-            encoder.WriteString("BenzoTeam"); // V
+            encoder.WriteString("DummyBrawl"); // V
 
             encoder.WriteVInt(2);
             {

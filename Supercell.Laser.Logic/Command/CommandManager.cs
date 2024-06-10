@@ -21,6 +21,7 @@
                 {520, typeof(LogicLevelUpCommand)},
                 {521, typeof(LogicPurchaseHeroLvlUpMaterialCommand)},
                 {525, typeof(LogicSelectCharacterCommand)},
+                {527, typeof(LogicSetPlayerNameColorCommand)},
                 {533, typeof(LogicQuestsSeenCommand)},
                 {534, typeof(LogicPurchaseBrawlPassCommand)},
                 {535, typeof(LogicClaimTailRewardCommand)},
