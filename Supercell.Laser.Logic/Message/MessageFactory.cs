@@ -80,6 +80,8 @@
                 {14479, typeof(TeamInvitationResponseMessage)},
 
                 {14600, typeof(AvatarNameCheckRequestMessage)},
+                
+                {14700, typeof(ListBrawlTvChannelsMessage)},
 
                 {18686, typeof(SetSupportedCreatorMessage)}
             };

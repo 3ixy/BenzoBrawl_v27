@@ -13,7 +13,7 @@
             ;
         }
 
-        public PlayerDisplayData(int thumbnail, string name, int Color = 0)
+        public PlayerDisplayData(int thumbnail, string name, int Color = 1)
         {
             ThumbnailId = thumbnail;
             Name = name;

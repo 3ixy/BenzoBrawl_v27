@@ -76,6 +76,8 @@
         GuaranteedBoxWithLevel = 31,
         GearToken = 32,
         GearScrap = 33,
-        Spray = 35
+        Spray = 35,
+        DummyVipBox = 1,
+        DummyVipGuaranteed = 1
     }
 }

@@ -38,8 +38,7 @@
 
         public AllianceMember(ClientAvatar avatar)
         {
-            ClientAvatar avatar2 = LogicServerListener.Instance.GetAvatar(Avatar.AccountId);
-            DisplayData = new PlayerDisplayData(avatar2.HomeMode.Home.ThumbnailId, avatar2.Name);
+            DisplayData = new PlayerDisplayData(avatar.HomeMode.Home.ThumbnailId, avatar.Name, avatar.HomeMode.Home.NameColor);
             AccountId = avatar.AccountId;
             Trophies = avatar.Trophies;
             Role = avatar.AllianceRole;

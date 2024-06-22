@@ -221,6 +221,9 @@
                 case 18686:
                     SetSupportedCreatorReceived((SetSupportedCreatorMessage)message);
                     break;
+                case 14701:
+                    TuneBrawlTvChannelReceived((TuneBrawlTvChannelsMessage)message);
+                    break;
 
                 default:
                     Logger.Print($"MessageManager::ReceiveMessage - no case for {message.GetType().Name} ({message.GetMessageType()})");
@@ -323,6 +326,38 @@
 
             ClientAvatar avatar = data.Avatar;
             long battleId = avatar.BattleId;
+
+            BattleMode battle = Battles.Get(battleId);
+            if (battle == null) return;
+
+            SpectatedBattle = battle;
+            UDPSocket socket = UDPGateway.CreateSocket();
+            socket.Battle = battle;
+            socket.IsSpectator = true;
+            socket.TCPConnection = Connection;
+            Connection.UdpSessionId = socket.SessionId;
+            battle.AddSpectator(socket.SessionId, new UDPGameListener(socket, Connection));
+
+            StartLoadingMessage startLoading = new StartLoadingMessage();
+            startLoading.LocationId = battle.Location.GetGlobalId();
+            startLoading.TeamIndex = 0;
+            startLoading.OwnIndex = 0;
+            startLoading.GameMode = battle.GetGameModeVariation() == 6 ? 6 : 1;
+            startLoading.Players.AddRange(battle.GetPlayers());
+            startLoading.SpectateMode = 1;
+
+            Connection.Send(startLoading);
+
+            UdpConnectionInfoMessage info = new UdpConnectionInfoMessage();
+            info.SessionId = Connection.UdpSessionId;
+            info.ServerAddress = Configuration.Instance.UdpHost;
+            info.ServerPort = Configuration.Instance.UdpPort;
+            Connection.Send(info);
+        }
+        
+        private void TuneBrawlTvChannelReceived(TuneBrawlTvChannelsMessage message)
+        {
+            long battleId = 1;
 
             BattleMode battle = Battles.Get(battleId);
             if (battle == null) return;
@@ -882,7 +917,7 @@
                                         HomeMode.Avatar.AddDiamonds(Int32.Parse(codepart[2]));
                                         AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
                                         loginFailed.ErrorCode = 1;
-                                        loginFailed.Message = "Success. You recived: "+codepart[2]+" Gems";
+                                        loginFailed.Message = "Success. You received: "+codepart[2]+" Gems";
                                         Connection.Send(loginFailed);
 
                                         return;
@@ -891,14 +926,14 @@
                                         HomeMode.Avatar.AddGold(Int32.Parse(codepart[2]));
                                         AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
                                         loginFailed.ErrorCode = 1;
-                                        loginFailed.Message = "Success. You recived: "+codepart[2]+" Coins";
+                                        loginFailed.Message = "Success. You received: "+codepart[2]+" Coins";
                                         Connection.Send(loginFailed);
                                     }
-                                     if (codepart[1] == "st") {
+                                    if (codepart[1] == "st") {
                                         HomeMode.Avatar.AddStarTokens(Int32.Parse(codepart[2]));
                                         AuthenticationFailedMessage loginFailed = new AuthenticationFailedMessage();
                                         loginFailed.ErrorCode = 1;
-                                        loginFailed.Message = "Success. You recived: "+codepart[2]+" Coins";
+                                        loginFailed.Message = "Success. You received: "+codepart[2]+" D-Coins";
                                         Connection.Send(loginFailed);
                                     }
                                 }
@@ -1058,7 +1093,11 @@
                 leaderboard.Region = message.IsRegional ? "RU" : null;
                 foreach (Account data in rankingList)
                 {
-                    leaderboard.Avatars.Add(new KeyValuePair<ClientHome, ClientAvatar>(data.Home, data.Avatar));
+                    if (!data.Avatar.Banned)
+                    {
+                        leaderboard.Avatars.Add(new KeyValuePair<ClientHome, ClientAvatar>(data.Home, data.Avatar));
+                    }
+                    
                 }
                 leaderboard.OwnAvatarId = Connection.Avatar.AccountId;
 

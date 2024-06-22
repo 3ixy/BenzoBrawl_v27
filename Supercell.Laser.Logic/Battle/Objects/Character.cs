@@ -885,10 +885,20 @@
                 newY += deltaY;
 
                 if (!GameObjectManager.GetBattle().IsInPlayArea(newX, newY)) return true;
+                if (!GameObjectManager.GetBattle().IsInPlayArea(newX+5, newY+5)) return true;
+                if (!GameObjectManager.GetBattle().IsInPlayArea(newX-5, newY-5)) return true;
 
-                Tile nextTile = GameObjectManager.GetBattle().GetTileMap().GetTile(newX, newY);
+                Tile nextTile = GameObjectManager.GetBattle().GetTileMap().GetTile(newX+5, newY+5);
                 if (nextTile == null) return true;
                 if (nextTile.Data.BlocksMovement && !nextTile.IsDestructed()) return true;
+                
+                Tile nextTile2 = GameObjectManager.GetBattle().GetTileMap().GetTile(newX-5, newY-5);
+                if (nextTile2 == null) return true;
+                if (nextTile2.Data.BlocksMovement && !nextTile2.IsDestructed()) return true;
+                
+                Tile nextTile3 = GameObjectManager.GetBattle().GetTileMap().GetTile(newX, newY);
+                if (nextTile3 == null) return true;
+                if (nextTile3.Data.BlocksMovement && !nextTile3.IsDestructed()) return true;
             }
 
             return false;

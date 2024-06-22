@@ -14,7 +14,7 @@
 
     public static class CmdHandler
     {
-        public static string TID_ERROR_POP_UP_OUT_OF_SYNC = "TID_ERROR_POP_UP_OUT_OF_SYNC";
+        public static string TID_ERROR_POP_UP_OUT_OF_SYNC = "Данные вашего аккаунта обновлены\nAccount details was updated";
         public static void Start()
         {
             while (true)
@@ -174,8 +174,9 @@
             }
 
             account.Avatar.Banned = true;
-            account.Avatar.ResetTrophies();
-            account.Avatar.Name = "Brawler";
+            // account.Avatar.ResetTrophies();
+            // account.Avatar.Name = "Brawler";
+            account.Avatar.HomeMode.Home.NameColor = 0;
             if (Sessions.IsSessionActive(id))
             {
                 var session = Sessions.GetSession(id);

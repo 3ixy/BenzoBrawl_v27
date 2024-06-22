@@ -152,9 +152,50 @@ namespace Supercell.Laser.Logic.Home
                     HomeMode.SimulateGatcha(unit);
                     command.DeliveryUnits.Add(unit);
                 }
+                else if (offer.Type == ShopItem.Emote)
+                {
+                    DeliveryUnit unit = new DeliveryUnit(19);
+                    GatchaDrop reward = new GatchaDrop(10);
+                    reward.PinGlobalId = offer.ItemDataId;
+                    reward.Count = offer.Count;
+                    unit.AddDrop(reward);
+                    command.DeliveryUnits.Add(unit);
+                }
+                else if (offer.Type == ShopItem.DummyVipBox)
+                {
+                    Random random = new Random();
+                    int vipChange = random.Next(0, 10);
+                    
+                    DeliveryUnit unit = new DeliveryUnit(2);
+                    
+                    if (vipChange == 9)
+                    {
+                        GatchaDrop reward = new GatchaDrop(8);
+                        reward.Count = 50;
+                        unit.AddDrop(reward);
+                        HomeMode.Avatar.IsPremium = true;
+                    }
+                    else
+                    {
+                        GatchaDrop reward = new GatchaDrop(7);
+                        reward.Count = 0;
+                        unit.AddDrop(reward);
+                    }
+                    
+                    command.DeliveryUnits.Add(unit);
+                }
+                else if (offer.Type == ShopItem.DummyVipGuaranteed)
+                {
+                    DeliveryUnit unit = new DeliveryUnit(2);
+                    GatchaDrop reward = new GatchaDrop(8);
+                    reward.Count = 1;
+                    unit.AddDrop(reward);
+                    HomeMode.Avatar.IsPremium = true;
+                    command.DeliveryUnits.Add(unit);
+                }
                 else
                 {
-                    // todo...
+                    // todo
                 }
 
                 command.Execute(HomeMode);
@@ -172,7 +213,6 @@ namespace Supercell.Laser.Logic.Home
                 OfferBundles.RemoveAll(bundle => bundle.IsDailyDeals);
             }
             OfferBundles.RemoveAll(offer => offer.EndTime <= time);
-
             if (isNewAcc || DateTime.UtcNow >= DateTime.UtcNow.Date.AddHours(8)) // Daily deals refresh at 08:00 AM UTC
             {
                 if (LastVisitHomeTime < DateTime.UtcNow.Date.AddHours(8))
@@ -264,18 +304,22 @@ namespace Supercell.Laser.Logic.Home
 
                     break;
                 case 1: // VIP Offer
-                    Offer vipOffer = new Offer(ShopItem.MegaBox, 1);
+                    Offer vipOffer = new Offer(ShopItem.DummyVipBox, 1, 10000001);
                     bundle.Items.Add(vipOffer);
                     bundle.Cost = 50;
                     bundle.OldCost = 80;
                     bundle.Currency = 0;
+                    bundle.Title = "Ежедневный ящик с VIP-статусом!";
+                    bundle.IsDailyDeals = false;
                     break;
                 case 2: // mega box
                     Offer megaBoxOffer = new Offer(ShopItem.MegaBox, 1);
                     bundle.Items.Add(megaBoxOffer);
-                    bundle.Cost = 40;
+                    bundle.Cost = 15;
                     bundle.OldCost = 80;
                     bundle.Currency = 0;
+                    bundle.Title = "Ежедневный мегаящик";
+                    bundle.IsDailyDeals = false;
                     break;
             }
 

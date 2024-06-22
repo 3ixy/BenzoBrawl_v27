@@ -21,9 +21,10 @@
         public void DoDrop(HomeMode homeMode)
         {
             ClientAvatar avatar = homeMode.Avatar;
-
+            Console.WriteLine(Type);
             switch (Type)
             {
+                
                 case 1: // Unlock a hero
                     CharacterData characterData = DataTables.Get(16).GetDataByGlobalId<CharacterData>(DataGlobalId);
                     if (characterData == null) return;
@@ -56,7 +57,6 @@
             stream.WriteVInt(Count);
             ByteStreamHelper.WriteDataReference(stream, DataGlobalId);
             stream.WriteVInt(Type);
-
             ByteStreamHelper.WriteDataReference(stream, 0);
             ByteStreamHelper.WriteDataReference(stream, PinGlobalId);
             ByteStreamHelper.WriteDataReference(stream, 0);

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Supercell.Laser.Logic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+061c8cf4d1c8504318c07fe33e1ee646dcfe0451")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5fec8579fb044e4b820e70c5a46910617926afc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Supercell.Laser.Logic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Supercell.Laser.Logic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

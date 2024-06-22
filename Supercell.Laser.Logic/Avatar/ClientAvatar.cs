@@ -250,7 +250,7 @@
                     ByteStreamHelper.WriteDataReference(Stream, 5000009);
                     Stream.WriteVInt(StarTokens);
 
-                    foreach (Hero hero in Heroes)
+                    foreach (Hero hero in Heroes)   
                     {
                         ByteStreamHelper.WriteDataReference(Stream, hero.CardData);
                         Stream.WriteVInt(1);

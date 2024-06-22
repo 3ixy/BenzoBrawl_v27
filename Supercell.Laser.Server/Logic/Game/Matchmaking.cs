@@ -229,15 +229,17 @@
             string[] botNicknames = new string[] 
             { 
             "Шамиль", "Рауль", "Вадим", "Алан",
-            "Вхуемпокер", "Дахн", "Anushack user", "vk.me/@proxyara", 
-            "[Benzo] Абубандит", "MysticPhoenix", "Леон",
+            "Вхуемпокер", "Дахн", "Anushack user", "Dato", 
+            "[Dummy] Абубандит", "MysticPhoenix", "Леон",
             "Dmitro_Gryzin", "Jeksio", "Fredj", "Xanter", "ENIZIN",
             "АШОТ БЛАТ", "Gene", "Мяу", "Убил = гей", "Шалава",
             "Сопля", "Шмаль Абхазия", "Маджыл", "[Ťвøя]ķатастрøфа",
             "KoT_БоPuS", "-3acTPeJIuCb-", "52", "Полупокер",
             "Азартный ебантей", "Кот", "King228", "Aurum",
             "MMA", "Sosatel", "NoName", " .", "станок",
-            "путь наркомана", "11", "ками кириешка"
+            "путь наркомана", "11", "ками кириешка", "Izgoy52",
+            "@Dummy_team", "52", "Говноед52", "бигбро", "Izgoi52|DummyTOP", "Hasanbet",
+            "Нагиев", "Лохматка", "=]", "бот"
             }; // никнеймы
 
             fakeFounded = 0;
