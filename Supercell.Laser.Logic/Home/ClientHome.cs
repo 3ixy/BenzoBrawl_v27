@@ -220,6 +220,16 @@ namespace Supercell.Laser.Logic.Home
                     UpdateDailyOfferBundles();
                 }
             }
+            if (isNewAcc || DateTime.UtcNow >= LastVisitHomeTime.AddHours(2)) // Проверяем каждые 2 часа
+            {
+                if (LastVisitHomeTime < DateTime.UtcNow.AddHours(-2))
+                {
+                    for (int i = 0; i < 4; i++)
+                    {
+                        GenerateSpecialOffer();
+                    }
+                }
+            }
         }
 
         private void UpdateDailyOfferBundles()
@@ -238,6 +248,20 @@ namespace Supercell.Laser.Logic.Home
             }
         }
 
+        private OfferBundle GenerateSpecialOffer()
+        {
+            OfferBundle bundle = new OfferBundle();
+            bundle.EndTime = DateTime.UtcNow.Date.AddHours(2); // на 2 часа
+            Offer vipOffer = new Offer(ShopItem.DummyVipBox, 1);
+            bundle.Cost = 50;
+            bundle.OldCost = 500;
+            bundle.Currency = 0;
+            bundle.Title = "Акция! Ящик с VIP-статусом!";
+            bundle.IsDailyDeals = false;
+            bundle.Items.Add(vipOffer);
+            OfferBundles.Add(bundle);
+            return bundle;
+        }
         private OfferBundle GenerateDailyGift()
         {
             OfferBundle bundle = new OfferBundle();
@@ -307,7 +331,7 @@ namespace Supercell.Laser.Logic.Home
                     Offer vipOffer = new Offer(ShopItem.DummyVipBox, 1, 10000001);
                     bundle.Items.Add(vipOffer);
                     bundle.Cost = 50;
-                    bundle.OldCost = 80;
+                    bundle.OldCost = 500;
                     bundle.Currency = 0;
                     bundle.Title = "Ежедневный ящик с VIP-статусом!";
                     bundle.IsDailyDeals = false;
